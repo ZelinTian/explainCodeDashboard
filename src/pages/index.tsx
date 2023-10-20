@@ -3,10 +3,10 @@ import { Inter } from "next/font/google";
 import { getServerSession } from "next-auth/next";
 import { options } from "./api/auth/[...nextauth]";
 import LoginPage from "./LoginPage";
-import UserCard from "./UserCard";
 import { useEffect, useState } from "react";
-import { useSession, signIn } from "next-auth/react"
+import { useSession } from "next-auth/react"
 import { useRouter } from 'next/router';
+import { data } from "autoprefixer";
 
 type HomeProps = {
   initialSession: any;
@@ -42,7 +42,11 @@ async function getGithubUserId(username: any) {
 
 export default function Home() {
   const { data: session } = useSession()
+  console.log('token in index', session?.accessToken);
+  console.log('data in index', session)
   const router = useRouter();
+
+  
 
   return (
     <>

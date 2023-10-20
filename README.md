@@ -1,40 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+After install the package：
 
-## Getting Started
+npm run dev to start the project
 
-First, run the development server:
+After auth the login user, you can use getGithubUserId function in index.tsx file to retrieve user info
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+the api response looks like this:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+{
+  "login": "ZelinTian",
+  "id": 40151653,
+  "node_id": "MDQ6VXNlcjQwMTUxNjUz",
+  "avatar_url": "https://avatars.githubusercontent.com/u/40151653?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/ZelinTian",
+  "html_url": "https://github.com/ZelinTian",
+  "followers_url": "https://api.github.com/users/ZelinTian/followers",
+  "following_url": "https://api.github.com/users/ZelinTian/following{/other_user}",
+  "gists_url": "https://api.github.com/users/ZelinTian/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/ZelinTian/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/ZelinTian/subscriptions",
+  "organizations_url": "https://api.github.com/users/ZelinTian/orgs",
+  "repos_url": "https://api.github.com/users/ZelinTian/repos",
+  "events_url": "https://api.github.com/users/ZelinTian/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/ZelinTian/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": null,
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "twitter_username": null,
+  "public_repos": 10,
+  "public_gists": 0,
+  "followers": 0,
+  "following": 0,
+  "created_at": "2018-06-10T21:48:16Z",
+  "updated_at": "2023-06-30T21:28:38Z"
+}
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+TODO:
+1. After the user login, the url is redirect to dashboard, but the UI needs to be rendered by mannually refreshing the browser.
+2. The signout button has no css style now. It is next to the user icon on the right side of topbar.
+3. Landing page and dashboard are just structure.

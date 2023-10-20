@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Snippet } from "./Snippet";
 import { FileIcon, FolderIcon, JSXIcon } from "./Icons";
 
